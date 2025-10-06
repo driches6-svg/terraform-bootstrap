@@ -22,4 +22,3 @@ jobs:
             quiet: true
             output_format: github_failed_only
             soft_fail: false
-            skip_paths: '.github/*'
