@@ -12,3 +12,18 @@ repos:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: check-yaml
+
+
+# Security / IaC misconfiguration checks
+  - repo: https://github.com/bridgecrewio/checkov
+    rev: 3.2.255  # stable version; update periodically
+    hooks:
+      - id: checkov
+        name: checkov (terraform)
+        args:
+          - --framework
+          - terraform
+          - --quiet
+          - --skip-download
+        pass_filenames: false
+        stages: [commit, push]

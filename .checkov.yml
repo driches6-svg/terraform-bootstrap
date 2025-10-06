@@ -1,0 +1,5 @@
+skip-paths:
+  - .github/ # example: skip CI files
+framework: terraform
+compact: true
+quiet: true
